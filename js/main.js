@@ -19,7 +19,7 @@ $('a[href^="#"]').on('click', function(event) {
 
 $(window).scroll(function(){
 
-    if ( $(this).scrollTop() > 300 ) {
+    if ( $(this).scrollTop() > 1100 ) {
 
       $('.scroll-to-top').fadeIn();
 
@@ -41,3 +41,14 @@ $(window).scroll(function(){
   });
 
 
+//PARTICLES EFFECT BACKGROUND
+  particlesJS.load('particles-js', 'js/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+
+
+//BUTTON RESET FORM FIELDS
+$('#reset-button').on('click', function(e){
+  //e.preventDefault();
+  document.forms[0].reset();
+});
